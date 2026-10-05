@@ -1,0 +1,30 @@
+#mainContainer{
+    text-align:center;
+    background-color: aqua;
+    padding: 20px;
+}
+
+#increment{
+  background-color: green;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 20px;;
+border: none;
+}
+
+#decrement{
+background-color:red;
+padding: 30px;
+margin: 20px;
+border-radius: 20px;
+border: none;
+}
+
+#reset{
+  background-color:black;
+  color:white;
+padding: 30px;
+border-radius: 20px;
+border: none;
+
+}

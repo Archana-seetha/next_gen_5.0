@@ -1,0 +1,32 @@
+.box{
+    background-color:lightblue;
+    margin:10px;
+    padding:10px;
+    color:brown;
+    font-weight:bold;
+
+}
+
+.block
+{   
+    display:block;
+    background-color:lightgreen;
+    
+}
+
+.inline{
+    display:inline;
+    background-color:lightpink;
+}
+.inline-block{
+    display:inline-block;
+    height:100px;
+    width:100px;
+    background-color:lightsalmon;
+}
+
+.none{
+    display:none;
+    
+}
+ 

@@ -1,0 +1,12 @@
+           redeclaration              reassignment
+ 
+var          accept                  accept -------------old
+ 
+let            no                    accept-------------new
+
+const         no                       no------------blocks
+
+syntax:
+keyword    varname=value
+
+* java script uses the camel case ex: firstValue

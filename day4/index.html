@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>into js</title>
+</head>
+<body>
+    <h1>Random number game</h1>
+    <input type="text"  placeholder="enter a number" id="userinput">
+    <button onclick="randomgame()">check</button>
+    <h3 id="randomValue">  </h3>
+    <script>
+        let rn=Math.random();
+        let mul20=parseInt(rn*20);
+        //console.log(rn);
+        //console.log(mul20);
+        let randomValueElementResult=document.getElementById("randomValue");
+        
+
+        let inputtag=document.getElementById("userinput");
+        
+
+        function randomgame(){
+            let convertinteger=parseInt(inputtag.value);
+            if(convertinteger===mul20){
+                randomValueElementResult.textContent="you are win"
+            }
+            else{
+                randomValueElementResult.textContent="you are loose"+mul20;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student management</title>
+    <link rel="stylesheet" href="sm.css">
+</head>
+<body>
+    <div class="container">
+        <h1>student management system</h1>
+        <input type="text" id="name" placeholder="enter your name">
+        <input type="text" id="marks" placeholder="enter your marks">
+        <button onclick="addStudent()">add student</button>
+        
+        <h2>student list</h2>
+        <table border="4" align="center">
+            <thead>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>status</th>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+        <h3> Total Marks:<span id="total">0</span></h3>
+        <h3>Average Marks:<span id="avg" >0</span></h3>
+    </div>
+
+    <script src="sm.js">
+
+    </script>
+</body>
+</html>

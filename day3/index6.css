@@ -1,0 +1,9 @@
+.box
+{
+    border: 6px solid black;
+    padding:20px;
+    margin: 39px;
+    border-left : 10px double red;
+    border-right:5px dotted green;
+    border-top:5px dashed blue;
+}

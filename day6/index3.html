@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External API in js</title>
+</head>
+<body>
+    <h1>Food Items</h1>
+    <div id="meals"></div>
+    <script>
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+        .then((response) => response.json())
+        .then(data=>{
+
+            let meals=data.meals
+            let output=""
+            for(let meal of meals){
+
+               output+=`
+         <h2>${meal.strMeal}</h2>
+         <p>${meal.strInstructions}</p>
+        <img src="${meal.strMealThumb}" width="300px" height="300px">
+        <hr>
+        `
+    }
+    document.getElementById("meals").innerHTML=output
+})
+
+    </script>
+</body>
+</html>

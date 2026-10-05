@@ -1,0 +1,31 @@
+/* Universal Selector */
+
+*{
+    margin: 2px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* element selector */
+h1{
+    color:blue;
+
+}
+
+/* class selector */
+
+.student{
+    color:red;
+    font-size: 30px;
+}
+
+
+/* Id selector */
+#special{
+    background-color: yellow;
+    padding: 10px;
+}
+
+/* group selector */
+h1,#special,h2{
+    text-align:center;
+}

@@ -1,0 +1,22 @@
+.card
+{
+    width: 300px;
+    /* height: 300px; */
+    border: 2px solid black;
+}
+img{
+    width: 100%;
+}
+h3{
+    background-color:salmon;
+    padding: 10px;
+   
+
+}
+button
+{
+    background-color:green;
+    padding: 10px;
+    border: ;
+    width: 100%;
+}

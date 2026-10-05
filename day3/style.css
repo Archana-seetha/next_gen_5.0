@@ -1,0 +1,27 @@
+
+        h1{
+            color:blue;
+            background-color:orange;
+            padding:5px;
+            text-align:center;
+            transition:transform .5s;
+        }
+        p{
+            color:black;
+            background-color:lightgray;
+            padding: 30px;
+            box-shadow: 0 0 5px red;
+        
+        }
+        
+        body{
+            background-image:url(
+                "image.png"
+            );
+            background-size:cover;
+            background-attachment:fixed;
+        }
+        h1:hover{
+            transform:scale(1.2);
+        }
+    

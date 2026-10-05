@@ -1,0 +1,125 @@
+/* --- Reset & Global Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Section Header --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #db4d5e; /* Rose-red tone matching the heading */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Grid Layout --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Team Card Architecture --- */
+.team-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gray container background mimicking the original frame setup */
+.image-wrapper {
+    background-color: #f1f2f6; 
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px 20px;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.role {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #999999;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    color: #b83b4b; /* Crimson tint for the names */
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #777777;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* --- Social Icons styling --- */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
+    background-color: #e8a7b1; /* Muted rose background matching the icons */
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #db4d5e;
+}

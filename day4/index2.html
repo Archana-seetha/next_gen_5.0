@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>into js</title>
+</head>
+<body>
+    <h1>sum of two numbers</h1>
+    <input type="text"  placeholder="enter a 1st number" id="userinput1">
+    <input type="text"  placeholder="enter a 2nd number" id="userinput2">
+    <button onclick="sum()">sum</button>
+    <h5 id="sumtag"> </h5> </h5>
+    <script>
+    
+       
+        
+
+        let inputtag1=document.getElementById("userinput1");
+        let inputtag2=document.getElementById("userinput2");
+        let sumtag=document.getElementById("sumtag");
+        
+        
+
+        function sum(){
+           let sum=parseInt(inputtag1.value)+parseInt(inputtag2.value);
+           sumtag.textContent="Total:"+sum;
+            
+        }
+
+    </script>
+</body>
+</html>

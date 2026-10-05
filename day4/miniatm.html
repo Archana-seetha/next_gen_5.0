@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI ATM</title>
+</head>
+<body>
+     <h1> mini atm</h1>
+     
+     <div id="loginSection">
+         <input type="password" placeholder="Enter your pin" id="userPin">
+         <button onclick="login()">Login</button>
+     </div>
+
+     <div id="atmSection" style="display: none; margin-top: 20px;">
+         <input type="number" placeholder="Enter your amount" id="userAmount">
+         <br><br>
+         <button onclick="checkBal()">check balance</button>
+         <button onclick="deposit()">deposit</button>
+         <button onclick="withdraw()">withdraw</button>
+     </div>
+     
+     <p id="result"></p>
+
+    <script>
+        let correctpin = "1234";
+        let balance = 10000;
+        
+        let userPinInput = document.getElementById("userPin");
+        let userValueInput = document.getElementById("userAmount");
+        let ptag = document.getElementById("result");
+        let loginSection = document.getElementById("loginSection");
+        let atmSection = document.getElementById("atmSection");
+
+        function login() {
+            if (userPinInput.value === correctpin) {
+                atmSection.style.display = "block";
+                loginSection.style.display = "none";
+                ptag.textContent = "Login successful! Welcome to Mini ATM.";
+            } else {
+                ptag.textContent = "Wrong PIN. Please try again.";
+            }
+        }
+
+        function checkBal(){
+            ptag.textContent = "Current Balance: " + balance;
+        }
+
+        function deposit(){
+            let amount = parseInt(userValueInput.value);
+            if (isNaN(amount) || amount <= 0) {
+                ptag.textContent = "Please enter a valid deposit amount.";
+                return;
+            }
+            balance = balance + amount;
+            ptag.textContent = "Successfully deposited: " + amount;
+            userValueInput.value = "";
+        }
+
+        function withdraw(){
+            let amount = parseInt(userValueInput.value);
+            if (isNaN(amount) || amount <= 0) {
+                ptag.textContent = "Please enter a valid withdrawal amount.";
+                return;
+            }
+            if (balance >= amount) {
+                balance = balance - amount;
+                ptag.textContent = "Successfully debited: " + amount;
+                userValueInput.value = "";
+            } else {
+                ptag.textContent = "Insufficient balance!";
+            }
+        }
+    </script>
+</body>
+</html>

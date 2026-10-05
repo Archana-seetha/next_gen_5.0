@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    .main-heading-style{
+
+        background-color:red;
+        text-decoration: underline;
+        text-align: center;
+        border-radius: 30px;
+
+
+    }
+    .buttonStyle{
+       background-color:green;
+       padding: 50px;
+       margin-right: 10px;
+       border-top-left-radius:  500px ;
+       border-bottom-right-radius: 500px;
+       border:5px dashed;
+
+
+
+    }
+    .buttonStyle1{
+       background-color:pink;
+       padding: 100px;
+       margin-right: 10px;
+       border-top-left-radius:20px ;
+       border-bottom-right-radius:20px;
+       border-top-right-radius: 20px;
+       border-bottom-left-radius:20px ;
+       border:5px dashed;
+
+    }
+
+    .buttonStyle1{
+       background-color:blueviolet;
+       padding: 100px;
+       margin-right: 10px;
+       border-top-left-radius:20px ;
+       border-bottom-right-radius:20px;
+       border-top-right-radius:200px;
+       border-bottom-left-radius:200px ;
+       border:5px dashed;
+
+    }
+
+    .buttonStyle2{
+       background-color:pink;
+       padding: 100px;
+       margin-right: 10px;
+       border-top-left-radius:200px ;
+       border-bottom-right-radius:200px;
+       border-top-right-radius: 200px;
+       border-bottom-left-radius:200px ;
+       border:5px dashed;
+
+    }
+
+   
+
+    }
+</style>
+<body>
+    <h1 id="mainheading">Dom operations</h1>
+    <h1 id="mainh1">Hello world</h1>
+    <button id="buttonid">submit</button>
+
+    <button id="buttonid1">submit</button>
+
+    <button id="buttonid2"></button>
+    
+    <button id="buttonid3"></button>
+
+    <script>
+    let mainh1tag=document.getElementById("mainheading");
+    mainh1tag.classList.add("main-heading-style");
+
+    let buttontag=document.getElementById("buttonid");
+    buttontag.classList.add("buttonStyle");
+
+    let buttontag1=document.getElementById("buttonid1");
+    buttontag1.classList.add("buttonStyle1");
+
+    let buttontag2=document.getElementById("buttonid2");
+    buttontag2.classList.add("buttonStyle2");
+
+    let buttontag3=document.getElementById("buttonid3");
+    buttontag3.classList.add("buttonStyle3");
+
+
+
+
+    
+
+    </script>
+    
+</body>
+</html>

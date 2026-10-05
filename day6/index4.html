@@ -495,7 +495,7 @@
 				requestJson(`${API_ROOT}list.php?c=list`),
 				requestJson(`${API_ROOT}list.php?a=list`)
 			]);
-			const categories = (categoryData.meals || []).map((item) => item.strCategory);
+			const categories = (categoryData.meals || []).map((item) => item.strCategory).filter((category) => category !== "Beef");
 			cuisines = (cuisineData.meals || []).map((item) => item.strArea);
 			fillFilter(elements.category, categories, "All categories");
 			fillFilter(elements.area, cuisines, "All cuisines");
@@ -622,6 +622,7 @@
 			const area = elements.area.value;
 			const direction = elements.sort.value;
 			const visibleMeals = meals
+				.filter((meal) => meal.strCategory !== "Beef")
 				.filter((meal) => !category || meal.strCategory === category)
 				.filter((meal) => !area || meal.strArea === area || cuisineMealIds?.has(meal.idMeal))
 				.filter((meal) => !favoritesOnly || favorites.has(meal.idMeal))
@@ -745,13 +746,13 @@
 				cuisineMealIds = null;
 				if (term) {
 					const data = await requestJson(`${API_URL}${encodeURIComponent(term)}`);
-					meals = data.meals || [];
-					fillFilter(elements.category, meals.map((meal) => meal.strCategory), "All categories");
+					meals = (data.meals || []).filter((meal) => meal.strCategory !== "Beef");
+					fillFilter(elements.category, meals.map((meal) => meal.strCategory).filter((category) => category !== "Beef"), "All categories");
 					fillFilter(elements.area, meals.map((meal) => meal.strArea), "All cuisines");
 				} else {
 					meals = await loadAllMeals();
 				}
-				renderFeatured(meals[0] || null);
+				renderFeatured((meals.filter((meal) => meal.strCategory !== "Beef"))[0] || null);
 				renderMeals();
 				if (!meals.length) {
 					elements.subtitle.textContent = "Try a different dish or ingredient.";
